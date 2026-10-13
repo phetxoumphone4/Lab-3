@@ -46,9 +46,8 @@ int main()
 	inFile.close();
 	// Calculate and output the mean and population standard deviation of the four numbers
 	std::cout << "The mean of the four numbers is: " << mean(number, number2, number3, number4) << std::endl;
-	
-	std::cout << " The population standard deviation of the four numbers is: " << popStdDev(number, number2, number3, number4, mean(number, number2, number3, number4)) << std::endl;""
-		;
+
+	std::cout << "The population standard deviation of the four numbers is: " << popStdDev(number, number2, number3, number4, mean(number, number2, number3, number4)) << std::endl;
 
 	// Create an output file stream object
 	std::ofstream outFile;
@@ -56,8 +55,9 @@ int main()
 	// Open the file "outMeanStd.dat" for writing
 	outFile.open("outMeanStd.dat");
 	// Check if the file was opened successfully
-	outFile << "The mean is: " << mean << std::endl;
-	outFile << "The population standard deviation is: " << popStdDev << std::endl;
+	outFile << "The mean is: " << mean(number, number2, number3, number4) << std::endl;
+
+	outFile << "The population standard deviation is: " << popStdDev(number, number2, number3, number4, mean(number, number2, number3, number4)) << std::endl;
 
 	outFile.close();
 
